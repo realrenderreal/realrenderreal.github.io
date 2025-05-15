@@ -536,6 +536,7 @@
         <a href="https://github.com/uynitsuj/real2render2real" style="color: #3478f6; text-decoration: none; font-weight: 600;">[Code]</a>
       </div>
     </section>
+
     <section id="abstract">
       <h1><span class="toggle-btn" onclick="toggleAbstract()">Abstract &#9662</span><span id="expand-hint" style="font-size: 0.8rem; margin-left: 8px; color: #424242;">(click to expand)</span></h1>
       <div id="abstract-content" style="display: none; max-height: 0; overflow: hidden; transition: max-height 0.5s ease-out;">
@@ -579,6 +580,38 @@
       </script>
     </section>
 
+    <section id="why-no-dynamics">
+      <h2><span class="toggle-btn" onclick="toggleDynamics()">Why No Dynamics Simulation? &#9662</span><span id="dynamics-expand-hint" style="font-size: 0.8rem; margin-left: 8px; color: #424242;">(click to expand)</span></h2>
+      <div id="dynamics-content" style="display: none; max-height: 0; overflow: hidden; transition: max-height 0.5s ease-out;">
+        <p>
+          In early experiments, we explored physics engines for real-to-sim-to-real data generation but found that simulated dynamics often diverged from real-world behavior—especially in gripper-object interactions, where issues like interpenetration and unrealistic collisions were common. Still, we wanted to pursue scalable, high-quality data generation through computation. To that end, we use IsaacLab while disregarding its collision computation features, relying on it solely for photorealistic rendering. Object motion is grounded by distilling object-centric dynamics from real-world demonstration videos and object visual appearance is distilled from high-fidelity 3D reconstructions.
+
+          This paper is not a critique of physics engines or their role in robot manipulation, but rather a positive result: computational data generation can scale effectively even without yet simulating dynamics.
+        </p>
+      </div>
+      <script>
+        function toggleDynamics() {
+          const content = document.getElementById('dynamics-content');
+          const btn = document.querySelector('#why-no-dynamics .toggle-btn');
+          const hint = document.getElementById('dynamics-expand-hint');
+          if (content.style.display === 'none') {
+            content.style.display = 'block';
+            setTimeout(() => {
+              content.style.maxHeight = content.scrollHeight + "px";
+            }, 10);
+            btn.innerHTML = 'Why No Dynamics? &#9652';
+            hint.style.display = 'none'; // Hide the hint after expanding
+          } else {
+            content.style.maxHeight = '0';
+            setTimeout(() => {
+              content.style.display = 'none';
+            }, 500); // Wait for transition to complete
+            btn.innerHTML = 'Why No Dynamics? &#9662';
+          }
+        }
+      </script>
+    </section>
+    
     <section id="realrollouts">
         <h2>Real Robot Rollouts</h2>
         <div style="display: flex; justify-content: center; width: 100%; margin-bottom: 1rem;">
