@@ -271,10 +271,6 @@
       const nextBtn = document.getElementById('iframe-carousel-next');
       const iframeData = [
         {
-          src: 'https://uynitsuj.github.io/viser-client/?playbackPath=https://uynitsuj.github.io/recordings/tiger_pick_r2r2r_recording_20250507_112639.viser&initialCameraPosition=1.027,0.445,0.681&initialCameraLookAt=0.188,-0.113,-0.129&initialCameraUp=-0.000,-0.000,1.000',
-          label: 'Tiger Pick'
-        },
-        {
           src: 'https://uynitsuj.github.io/viser-client/?playbackPath=https://uynitsuj.github.io/recordings/faucet_recording_20250507_110111.viser&initialCameraPosition=1.026,0.455,0.651&initialCameraLookAt=0.108,-0.143,-0.040&initialCameraUp=-0.000,-0.000,1.000',
           label: 'Faucet Turn'
         },
@@ -289,7 +285,11 @@
         {
           src: 'https://uynitsuj.github.io/viser-client/?playbackPath=https://uynitsuj.github.io/recordings/mug_demo.viser&initialCameraPosition=1.050,0.428,0.700&initialCameraLookAt=0.000,0.000,-0.100&initialCameraUp=-0.000,-0.000,1.000',
           label: 'Mug Place'
-        }
+        },
+        {
+          src: 'https://uynitsuj.github.io/viser-client/?playbackPath=https://uynitsuj.github.io/recordings/tiger_pick_r2r2r_recording_20250507_112639.viser&initialCameraPosition=1.027,0.445,0.681&initialCameraLookAt=0.188,-0.113,-0.129&initialCameraUp=-0.000,-0.000,1.000',
+          label: 'Tiger Pick'
+        },
       ];
       let iframeIdx = 0;
       function updateIframeCarousel() {
@@ -478,7 +478,7 @@
       <h2>Scan, Track, Render</h2>
       <!-- Main Iframe and Video Thumbnails as Interactive Selector -->
       <div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
-        <iframe id="main-iframe" src="https://uynitsuj.github.io/viser-client/?playbackPath=https://uynitsuj.github.io/recordings/tiger_pick_r2r2r_recording_20250507_112639.viser&initialCameraPosition=1.027,0.445,0.681&initialCameraLookAt=0.188,-0.113,-0.129&initialCameraUp=-0.000,-0.000,1.000" style="width: 100%; max-width: 100%; height: 460px; border: 1px solid #ccc; border-radius: 8px; margin-bottom: 0.75rem; box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);"></iframe>
+        <iframe id="main-iframe" src="https://uynitsuj.github.io/viser-client/?playbackPath=https://uynitsuj.github.io/recordings/faucet_recording_20250507_110111.viser&initialCameraPosition=1.026,0.455,0.651&initialCameraLookAt=0.108,-0.143,-0.040&initialCameraUp=-0.000,-0.000,1.000" style="width: 100%; max-width: 100%; height: 460px; border: 1px solid #ccc; border-radius: 8px; margin-bottom: 0.75rem; box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);"></iframe>
         <div class="video-carousel" id="iframe-thumbnails">
           <video data-iframe="0" autoplay muted loop playsinline src="data/demo_vids/faucet_demo.mp4" style="cursor:pointer;"></video>
           <video data-iframe="1" autoplay muted loop playsinline src="data/demo_vids/package_demo.mp4" style="cursor:pointer;"></video>
