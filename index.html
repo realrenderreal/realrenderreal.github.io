@@ -9,10 +9,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
     :root {
+      /*
+        To change the overall background color of the website, adjust --bg below.
+        For a subtle off-white, try #f9f9f9, #f7f7fa, or #fcfcfc.
+      */
       --accent: #3478f6;
-      --bg: #ffffff;
+      --bg: #f6f5f2;
       --text: #111;
-      --sidebar-bg: #f8f9fa;
+      --sidebar-bg: #f6f5f2;
       --sidebar-text: #555;
       --sidebar-active: var(--accent);
       --title-font: 'Inter', system-ui, sans-serif;
@@ -40,7 +44,7 @@
       position: fixed;
       height: 100vh;
       overflow-y: auto;
-      background: #fff;
+      background: var(--sidebar-bg);
       border: none;
       padding: 2rem 1rem;
       text-align: right;
@@ -465,7 +469,7 @@
     <section id="scaling">
       <h2>Performance Scaling</h2>
       <div style="display: flex; justify-content: center; width: 100%; margin: 2rem 0;">
-        <img src="data/r2r2r_plot.png" alt="Performance Plot" style="max-width: 900px; width: 100%; border-radius: 4px; box-shadow: 0 0 0px rgba(0,0,0,0.0)">
+        <img src="data/r2r2r_fig_no_bg.png" alt="Performance Plot" style="max-width: 900px; width: 100%; border-radius: 4px; box-shadow: 0 0 0px rgba(0,0,0,0.0)">
       </div>
       <p>Comparative analysis of imitation-learning policies trained on R2R2R-generated data against human teleoperation data across 1050 physical robot experiments and 5 robotic tasks.</p>
     </section>
